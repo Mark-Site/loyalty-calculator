@@ -33,7 +33,7 @@ export default function LoyaltyCalculator() {
     },
   ]
 
-  const [investment, setInvestment] = React.useState(20000)
+  const [investment, setInvestment] = React.useState(30000)
 
   const currentLevel =
     investment >= 100000
