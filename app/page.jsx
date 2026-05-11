@@ -98,7 +98,7 @@ export default function LoyaltyCalculator() {
               </div>
 
               <a
-                href={`https://mail.google.com/mail/?view=cm&fs=1&to=cryptoex585@gmail.com&su=${encodeURIComponent(
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=coindappsale@outlook.com&su=${encodeURIComponent(
                   `Loyalty Program: ${currentLevel.name}`
                 )}&body=${encodeURIComponent(
                   `Hello, I want to activate the ${currentLevel.name} Level.`
