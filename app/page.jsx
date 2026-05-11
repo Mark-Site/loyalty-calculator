@@ -6,7 +6,7 @@ export default function LoyaltyCalculator() {
   const levels = [
     {
       name: 'Silver',
-      min: 20000,
+      min: 30000,
       roi: 8.5,
       bonus: 40000,
       apy: 35,
@@ -15,7 +15,7 @@ export default function LoyaltyCalculator() {
     },
     {
       name: 'Gold',
-      min: 30000,
+      min: 50000,
       roi: 12.8,
       bonus: 60000,
       apy: 55,
@@ -24,7 +24,7 @@ export default function LoyaltyCalculator() {
     },
     {
       name: 'Obsidian',
-      min: 50000,
+      min: 100000,
       roi: 18.2,
       bonus: 100000,
       apy: 80,
@@ -36,9 +36,9 @@ export default function LoyaltyCalculator() {
   const [investment, setInvestment] = React.useState(20000)
 
   const currentLevel =
-    investment >= 50000
+    investment >= 100000
       ? levels[2]
-      : investment >= 30000
+      : investment >= 50000
       ? levels[1]
       : levels[0]
 
@@ -56,7 +56,7 @@ export default function LoyaltyCalculator() {
           </h1>
 
           <p className="text-zinc-400 text-xl">
-            Invest from $20,000 and unlock premium rewards.
+            Invest from $30,000 and unlock premium rewards.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function LoyaltyCalculator() {
 
                 <input
                   type="number"
-                  min={20000}
+                  min={30000}
                   value={investment}
                   onChange={(e) => setInvestment(Number(e.target.value))}
                   className="bg-transparent outline-none text-4xl font-bold w-full"
@@ -86,7 +86,7 @@ export default function LoyaltyCalculator() {
               </div>
 
               <div className="grid grid-cols-3 gap-4 mb-8">
-                {[20000, 30000, 50000].map((amount) => (
+                {[30000, 50000, 100000].map((amount) => (
                   <button
                     key={amount}
                     onClick={() => setInvestment(amount)}
